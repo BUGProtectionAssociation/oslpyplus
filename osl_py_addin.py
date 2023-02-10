@@ -127,7 +127,7 @@ class ShaderNodeOSLPY(bpy.types.ShaderNodeCustomGroup):
                 self.node_tree = CreateNodeGroup(graph, oso.Variables)
                 for var in oso.Variables:
                     if var.varType == 'param' and 'oslpy_has_' in var.Name:
-                        self.inputs[var.Name].hide=True
+                        #self.inputs[var.Name].hide=True
                 print("Done!")
 
     def mypropUpdate(self, context):
@@ -142,7 +142,7 @@ class ShaderNodeOSLPY(bpy.types.ShaderNodeCustomGroup):
     def reloads(self, context):
         # this seems to work also it shouldn't crash
         try:
-            self.UpdateScript()
+            #self.UpdateScript()
         except Exception as e:
             import traceback
             traceback.print_exc()
